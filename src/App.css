@@ -51,20 +51,14 @@
   height: calc(100vh - 80px);
   padding: 32px;
 }
-@media (max-width: 768px) {
-  .appbar {
-    display: none;
-  }
-  .content {
-    width: 100vw;
-    overflow-y: auto;
 
-    height: calc(100vh - 80px);
-  }
-  .header_title {
-    display: none;
-  }
+.content_media {
+  width: 100vw;
+  overflow-y: auto;
+
+  height: calc(100vh - 80px);
 }
+
 .appbar h3 {
   font-style: normal;
   font-weight: bold;
@@ -237,4 +231,8 @@ h2 {
   margin: 0;
   color: #fd0000;
   font-size: 7px;
+}
+
+.d_none {
+  display: none;
 }

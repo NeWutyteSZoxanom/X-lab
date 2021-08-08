@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { NavLink, Route } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 
 const Menu: React.FC = () => {
+  const isMatch = useMediaQuery({ query: "(min-width: 768px)" });
+
   const [vis, setVis] = useState(false);
   const visible = () => {
     setVis(!vis);
   };
   return (
-    <div className="appbar">
+    <div className={isMatch ? "appbar" : "d_none"}>
       <h3>Меню</h3>
 
       <NavLink to="/">
