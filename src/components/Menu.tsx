@@ -13,7 +13,7 @@ const Menu: React.FC = () => {
     <div className={isMatch ? "appbar" : "d_none"}>
       <h3>Меню</h3>
 
-      <NavLink to="/">
+      <NavLink to="/" activeClassName="active" exact>
         <div className="appbar_div">
           <div className="appbar_icon">
             <img className="header_icon_img" src="home.PNG" alt="" />

@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 const Search: React.FC = () => {
+  const isMatch = useMediaQuery({ query: "(min-width: 600px)" });
+
   const [res, setRes] = useState<any>({});
   const [post, setPost] = useState<number>(0);
   const [search, setSearch] = useState<string>("");
@@ -83,7 +86,7 @@ const Search: React.FC = () => {
               setPost(post + 1);
             }}
           >
-            <div className="appbar_icon">
+            <div className={isMatch ? "appbar_icon" : "d_none"}>
               <img className="lupa" src="lupa2.PNG" alt="" />
             </div>{" "}
             Поиск
